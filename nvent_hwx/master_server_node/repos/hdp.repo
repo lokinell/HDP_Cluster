@@ -1,0 +1,6 @@
+{
+ "Repositories": {
+    "base_url": "http://<LOCAL_REPO>/<HDP_REPO>",
+    "verify_base_url" : true
+  }
+}

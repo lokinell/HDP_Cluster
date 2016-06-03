@@ -1,0 +1,9 @@
+#VERSION_NUMBER=<AMBARI_VERSION>
+
+[ambari-<AMBARI_VERSION>]
+name=ambari-<AMBARI_VERSION>
+baseurl=http://<LOCAL_REPO>/<AMBARI_REPO>
+gpgcheck=1
+gpgkey=http://<LOCAL_REPO>/<AMBARI_REPO>RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1

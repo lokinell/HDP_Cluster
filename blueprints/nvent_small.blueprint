@@ -1,0 +1,296 @@
+{
+    "configurations" : [
+      {
+        "hive-site": {
+          "javax.jdo.option.ConnectionPassword": "hive"
+        }
+      },
+      {
+        "hbase-env" : {
+          "properties" : {
+            "hbase_master_heapsize" : "512m",
+            "hbase_regionserver_heapsize" : "512m"
+          }
+        }
+      },
+      {
+        "oozie-env" : {
+          "properties" : {
+            "oozie_heapsize" : "512m"
+          }
+        }
+      },   
+      {
+        "yarn-env" : {
+          "properties" : {
+            "apptimelineserver_heapsize" : "512",
+            "nodemanager_heapsize" : "512",
+            "resourcemanager_heapsize" : "512",
+            "yarn_heapsize" : "512"						
+          }
+        }
+      }      
+    ],
+    "host_groups" : [
+        {
+            "name" : "namenode",
+            "components" : [
+                {
+                    "name" : "SLIDER"
+                },
+                {
+                    "name" : "PIG"
+                },
+                {
+                    "name" : "OOZIE_CLIENT"
+                },
+                {
+                    "name" : "HBASE_CLIENT"
+                },
+                {
+                    "name" : "NAMENODE"
+                },
+                {
+                    "name" : "HCAT"
+                },
+                {
+                    "name" : "AMBARI_SERVER"
+                },
+                {
+                    "name" : "HDFS_CLIENT"
+                },
+                {
+                    "name" : "HIVE_CLIENT"
+                },
+                {
+                    "name" : "ZOOKEEPER_SERVER"
+                },
+                {
+                    "name" : "ZOOKEEPER_CLIENT"
+                },
+                {
+                    "name" : "HBASE_MASTER"
+                },
+                {
+                    "name" : "TEZ_CLIENT"
+                },
+                {
+                    "name" : "SQOOP"
+                },
+                {
+                    "name" : "YARN_CLIENT"
+                },
+                {
+                    "name" : "MAPREDUCE2_CLIENT"
+                },
+                {
+                    "name" : "METRICS_MONITOR"
+                },
+                {
+                    "name" : "DATANODE"
+                },                
+                {
+                    "name" : "NODEMANAGER"
+                },
+                {
+                    "name" : "HBASE_REGIONSERVER"
+                }
+            ],
+            "cardinality" : "1"
+        },
+        {
+            "name" : "resourcemanager",
+            "components" : [
+                {
+                    "name" : "PIG"
+                },
+                {
+                    "name" : "HISTORYSERVER"
+                },
+                {
+                    "name" : "OOZIE_CLIENT"
+                },
+                {
+                    "name" : "HBASE_CLIENT"
+                },
+                {
+                    "name" : "HCAT"
+                },
+                {
+                    "name" : "APP_TIMELINE_SERVER"
+                },
+                {
+                    "name" : "HDFS_CLIENT"
+                },
+                {
+                    "name" : "HIVE_CLIENT"
+                },
+                {
+                    "name" : "RESOURCEMANAGER"
+                },
+                {
+                    "name" : "ZOOKEEPER_SERVER"
+                },
+                {
+                    "name" : "ZOOKEEPER_CLIENT"
+                },
+                {
+                    "name" : "TEZ_CLIENT"
+                },
+                {
+                    "name" : "SQOOP"
+                },
+                {
+                    "name" : "YARN_CLIENT"
+                },
+                {
+                    "name" : "MAPREDUCE2_CLIENT"
+                },
+                {
+                    "name" : "METRICS_MONITOR"
+                },
+                {
+                    "name" : "DATANODE"
+                },                
+                {
+                    "name" : "NODEMANAGER"
+                },
+                {
+                    "name" : "HBASE_REGIONSERVER"
+                }
+            ],
+            "cardinality" : "1"
+        },
+        {
+            "name" : "hiveserver",
+            "components" : [
+                {
+                    "name" : "PIG"
+                },
+                {
+                    "name" : "OOZIE_CLIENT"
+                },
+                {
+                    "name" : "HBASE_CLIENT"
+                },
+                {
+                    "name" : "HCAT"
+                },
+                {
+                    "name" : "HDFS_CLIENT"
+                },
+                {
+                    "name" : "HIVE_CLIENT"
+                },
+                {
+                    "name" : "WEBHCAT_SERVER"
+                },
+                {
+                    "name" : "ZOOKEEPER_SERVER"
+                },
+                {
+                    "name" : "ZOOKEEPER_CLIENT"
+                },
+                {
+                    "name" : "HIVE_SERVER"
+                },
+                {
+                    "name" : "OOZIE_SERVER"
+                },
+                {
+                    "name" : "SECONDARY_NAMENODE"
+                },
+                {
+                    "name" : "TEZ_CLIENT"
+                },
+                {
+                    "name" : "HIVE_METASTORE"
+                },
+                {
+                    "name" : "METRICS_COLLECTOR"
+                },
+                {
+                    "name" : "SQOOP"
+                },
+                {
+                    "name" : "YARN_CLIENT"
+                },
+                {
+                    "name" : "MAPREDUCE2_CLIENT"
+                },
+                {
+                    "name" : "MYSQL_SERVER"
+                },
+                {
+                    "name" : "METRICS_MONITOR"
+                },
+                {
+                    "name" : "DATANODE"
+                },                
+                {
+                    "name" : "NODEMANAGER"
+                },
+                {
+                    "name" : "HBASE_REGIONSERVER"
+                }
+            ],
+            "cardinality" : "1"
+        },
+        {
+            "name" : "worker",
+            "components" : [
+                {
+                    "name" : "PIG"
+                },
+                {
+                    "name" : "HBASE_REGIONSERVER"
+                },
+                {
+                    "name" : "OOZIE_CLIENT"
+                },
+                {
+                    "name" : "HBASE_CLIENT"
+                },
+                {
+                    "name" : "HCAT"
+                },
+                {
+                    "name" : "HDFS_CLIENT"
+                },
+                {
+                    "name" : "HIVE_CLIENT"
+                },
+                {
+                    "name" : "NODEMANAGER"
+                },
+                {
+                    "name" : "DATANODE"
+                },
+                {
+                    "name" : "ZOOKEEPER_CLIENT"
+                },
+                {
+                    "name" : "TEZ_CLIENT"
+                },
+                {
+                    "name" : "SQOOP"
+                },
+                {
+                    "name" : "YARN_CLIENT"
+                },
+                {
+                    "name" : "MAPREDUCE2_CLIENT"
+                },
+                {
+                    "name" : "METRICS_MONITOR"
+                }
+            ],
+            "cardinality" : "0+"
+        }
+    ],
+    "Blueprints" : {
+        "blueprint_name" : "nvent_small",
+        "stack_name" : "HDP",
+        "stack_version" : "2.4"
+    }
+}

@@ -1,0 +1,8 @@
+#VERSION_NUMBER=<HDP_VERSION>
+[HDP-<HDP_VERSION>]
+name=HDP Version - HDP-<HDP_VERSION>
+baseurl=http://<LOCAL_REPO>/<HDP_REPO>
+gpgcheck=1
+gpgkey=http://<LOCAL_REPO>/<HDP_REPO>RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1

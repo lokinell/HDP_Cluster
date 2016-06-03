@@ -1,0 +1,16 @@
+[Unit]
+Description=HDP Centos7 Startup Service
+Requires=multi-user.target
+After=network-online.target network.service multi-user.target
+Conflicts=shutdown.target
+
+[Service]
+#Type=oneshot
+Type=forking
+Restart=no
+GuessMainPID=no
+RemainAfterExit=yes
+ExecStart=/root/scripts/startup.sh
+
+[Install]
+WantedBy=multi-user.target

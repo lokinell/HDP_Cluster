@@ -1,0 +1,7 @@
+[HDP-UTILS-<HDP_UTILS_VERSION>]
+name=HDP Utils Version - HDP-UTILS-<HDP_UTILS_VERSION>
+baseurl=http://<LOCAL_REPO>/<HDP_UTILS_REPO>
+gpgcheck=1
+gpgkey=http://<LOCAL_REPO>/<HDP_UTILS_REPO>RPM-GPG-KEY/RPM-GPG-KEY-Jenkins
+enabled=1
+priority=1
